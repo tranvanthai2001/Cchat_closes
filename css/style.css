@@ -147,7 +147,7 @@
 /* header mobile */
 .header_mobile {
     display: none;
-    padding: 20px 40px;
+    padding: 16px 20px;
 }
 .header_mobile_top {
     display: flex;
@@ -155,12 +155,17 @@
     position: relative;
 }
 .header_mobile .header_mobile_top .menu_icon i {
-    font-size: 40px;
+    font-size: 32px;
     color: #333;
     cursor: pointer;
 }
 .header_mobile .header_mobile_top .logo_mobile img {
     max-width: 130px;
+    max-height: 55px;
+    margin-top: -10px;
+}
+.header_mobile_top .icon_bag {
+    margin-right: 16px;
 }
 .header_mobile_top .icon_bag  .bag_child i {
     color: #d80000;
@@ -171,7 +176,7 @@
 .header_mobile_top .icon_bag  .bag_child span {
     position: absolute;
     top: -10px;
-    right: -17px;
+    right: -1px;
     background: #d80000c7;
     font-size: 12px;
     width: 25px;
@@ -210,6 +215,7 @@
     bottom: 0;
     width: 50%;
     transition: all 0.4s ease;
+    z-index: 10;
 }
 .show {
     left: 0 !important;
@@ -228,23 +234,35 @@
     font-size: 30px;
 }
 .box_menu_nav .box_nav .box_menu_item {
-    padding: 13px 32px 13px 12px;
+    padding: 13px 32px 13px 0;
     font-size: 16px;
-    color: #000 ;
-}
-.baner {
-    position: relative;
-    width: 100%;
+    color: #000;
+    border-bottom: 1px solid #c7c5c5;
+    font-weight: 500;
 }
 .baner .downNow {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: ease-out 0.5s;
+    outline: none;
+    box-shadow: inset 0 0 0 0 #725AC1;
+    cursor: pointer;
 }
-.baner .downNow button {
-    color: green;
-    font-size: 30px;
+.baner .downNow:hover {
+    border: 1px solid green;
+    border-radius: 3px;
+    color: #fff;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
 }
+.baner .downNow:active {
+    transform: scale(0.9);
+}
+
 /* responsive */
 @media screen and (max-width: 991px) {
     .header_top {
@@ -255,10 +273,5 @@
     }
     .header_mobile {
         display: block;
-    }
-}
-@media screen and (max-width: 576px) {
-    .header_mobile {
-        padding: 20px;
     }
 }
